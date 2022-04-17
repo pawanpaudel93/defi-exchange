@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { ethers, deployments } from "hardhat";
-import { Exchange } from "../typechain";
+import { Exchange } from "../../typechain";
 
 describe("Exchange", function () {
   let exchangeContract: Exchange;

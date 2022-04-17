@@ -43,6 +43,7 @@ const config: HardhatUserConfig = {
     rinkeby: {
       url: process.env.ALCHEMY_API_KEY_URL,
       accounts: [process.env.PRIVATE_KEY!],
+      saveDeployments: true,
       verify: {
         etherscan: {
           apiKey: process.env.ETHERSCAN_API_KEY,

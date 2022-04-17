@@ -17,8 +17,14 @@ const deployExchange: DeployFunction = async function (
     log: true,
     waitConfirmations: network.name === "hardhat" ? 0 : 6,
   });
+  // if (network.name !== "hardhat" && network.name !== "localhost") {
+  //   await hre.run("verify:verify", {
+  //     address: exchange.address,
+  //     constructorArguments: [CRYPTO_DEV_TOKEN_CONTRACT_ADDRESS],
+  //   });
+  // }
 
-  log(exchange.address);
+  log("Exchange deployed to:", exchange.address);
 };
 export default deployExchange;
 deployExchange.tags = ["all", "Exchange"];
